@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>C:\Users\rahul\appiumspace\AppiumFramework\testng.xml</span>
+                    <span>C:\Users\ayush\eclipse-workspace\AssignmentAppium\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="practise.AppiumFramework.ZomatoTest" hash-for-method="selectCountryTest({Restraunt_key=, Location_key=, Restraunt=, Location=})">selectCountryTest({Restraunt_key=, Location_key=, Restraunt=, Location=})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,17 +116,12 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="practise.AppiumFramework.ApiDemoTest" hash-for-method="apiDemoTest(hello)">apiDemoTest(hello)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="practise.AppiumFramework.ZomatoTest" hash-for-method="selectCountryTest({Restraunt_key=mcdon, Location_key=ind, Restraunt=Independence, Location=Independence})">selectCountryTest({Restraunt_key=mcdon, Location_key=ind, Restraunt=Independence, Location=Independence})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="practise.AppiumFramework.ApiDemoTest" hash-for-method="apiDemoTest(@#$%)">apiDemoTest(@#$%)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="practise.AppiumFramework.Ecommerce_tc_4" hash-for-method="totalValidation">totalValidation</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="practise.AppiumFramework.ZomatoTest" hash-for-method="uploadPhotoTest">uploadPhotoTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -127,41 +136,77 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">practise.AppiumFramework.ApiDemoTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">practise.AppiumFramework.ZomatoTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="apiDemoTest(hello)">
-                  </a> <!-- apiDemoTest(hello) -->
-                  <span class="method-name">apiDemoTest</span>
-                  <span class="parameters">(hello)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="apiDemoTest(@#$%)">
-                  </a> <!-- apiDemoTest(@#$%) -->
-                  <span class="method-name">apiDemoTest</span>
-                  <span class="parameters">(@#$%)</span>
+                  <a name="selectCountryTest({Restraunt_key=, Location_key=, Restraunt=, Location=})">
+                  </a> <!-- selectCountryTest({Restraunt_key=, Location_key=, Restraunt=, Location=}) -->
+                  <span class="method-name">selectCountryTest</span>
+                  <span class="parameters">({Restraunt_key=, Location_key=, Restraunt=, Location=})</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({By.id: com.application.zomato:id/edittext})
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+	at practise.AppiumFramework.CommonMethods.clickWhenVisible(CommonMethods.java:42)
+	at pageObjects.ZomatoPage.enterLocation(ZomatoPage.java:70)
+	at practise.AppiumFramework.ZomatoTest.selectCountryTest(ZomatoTest.java:34)
+	at java.util.ArrayList.forEach(Unknown Source)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@794b435f (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+	... 33 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.id: com.application.zomato:id/edittext})
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-05KBKCBV&apos;, ip: &apos;192.168.1.30&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 35 more
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">practise.AppiumFramework.Ecommerce_tc_4</span>
+              <span class="class-name">practise.AppiumFramework.ZomatoTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="totalValidation">
-                  </a> <!-- totalValidation -->
-                  <span class="method-name">totalValidation</span>
+                  <a name="selectCountryTest({Restraunt_key=mcdon, Location_key=ind, Restraunt=Independence, Location=Independence})">
+                  </a> <!-- selectCountryTest({Restraunt_key=mcdon, Location_key=ind, Restraunt=Independence, Location=Independence}) -->
+                  <span class="method-name">selectCountryTest</span>
+                  <span class="parameters">({Restraunt_key=mcdon, Location_key=ind, Restraunt=Independence, Location=Independence})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="uploadPhotoTest">
+                  </a> <!-- uploadPhotoTest -->
+                  <span class="method-name">uploadPhotoTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -169,21 +214,21 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\rahul\appiumspace\AppiumFramework\testng.xml</span>
+            <span class="header-content">C:\Users\ayush\eclipse-workspace\AssignmentAppium\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
+  &lt;parameter name=&quot;AppName&quot; value=&quot;com.application.zomato.apk&quot;/&gt;
+  &lt;parameter name=&quot;DeviceName&quot; value=&quot;Ayushemulator&quot;/&gt;
   &lt;listeners&gt;
-    &lt;listener class-name=&quot;resources.Listeners&quot;/&gt;
-    &lt;listener class-name=&quot;resources.ExtentReporterNG&quot;/&gt;
+    &lt;listener class-name=&quot;resources.TestListener&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;practise.AppiumFramework.Ecommerce_tc_4&quot;/&gt;
-      &lt;class name=&quot;practise.AppiumFramework.ApiDemoTest&quot;/&gt;
+      &lt;class name=&quot;practise.AppiumFramework.ZomatoTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -197,7 +242,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (2 classes)</span>
+                <span class="test-name">Test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -225,22 +270,22 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'totalValidation')
-data.setCell(0, 2, 'practise.AppiumFramework.Ecommerce_tc_4')
-data.setCell(0, 3, 95009);
+data.setCell(0, 1, 'selectCountryTest')
+data.setCell(0, 2, 'practise.AppiumFramework.ZomatoTest')
+data.setCell(0, 3, 740603);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'apiDemoTest')
-data.setCell(1, 2, 'practise.AppiumFramework.ApiDemoTest')
-data.setCell(1, 3, 46820);
+data.setCell(1, 1, 'uploadPhotoTest')
+data.setCell(1, 2, 'practise.AppiumFramework.ZomatoTest')
+data.setCell(1, 3, 171412);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'apiDemoTest')
-data.setCell(2, 2, 'practise.AppiumFramework.ApiDemoTest')
-data.setCell(2, 3, 42192);
+data.setCell(2, 1, 'selectCountryTest')
+data.setCell(2, 2, 'practise.AppiumFramework.ZomatoTest')
+data.setCell(2, 3, 168365);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 minutes</span>
+              <span class="suite-total-time">Total running time: 18 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -266,25 +311,20 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">practise.AppiumFramework.Ecommerce_tc_4</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
-                <span class="method-name">killAllNodes</span>
+              <div class="chronological-class-name">practise.AppiumFramework.ZomatoTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">selectCountryTest({Restraunt_key=mcdon, Location_key=ind, Restraunt=Independence, Location=Independence})</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-test before -->
-              <div class="test-method">
-                <span class="method-name">totalValidation</span>
-                <span class="method-start">3173 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">practise.AppiumFramework.ApiDemoTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">apiDemoTest(hello)</span>
-                <span class="method-start">98201 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">apiDemoTest(@#$%)</span>
-                <span class="method-start">140398 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">selectCountryTest({Restraunt_key=, Location_key=, Restraunt=, Location=})</span>
+                <span class="method-start">740607 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">uploadPhotoTest</span>
+                <span class="method-start">908975 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
